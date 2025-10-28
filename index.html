@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mostage - Presentation Framework</title>
+    <meta
+      name="description"
+      content="Mostage - Create and interactive presentations with Markdown and HTML support."
+    />
+
+    <meta
+      name="keywords"
+      content="Mostage, presentation, markdown, slides, framework, web-based, presentation-framework, live-editor, real-time, collaborative, interactive-presentations, modern-presentations, mostage"
+    />
+    <meta name="author" content="Mostage" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="en" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mostage.app/" />
+    <meta property="og:title" content="Mostage - Presentation Framework" />
+    <meta
+      property="og:description"
+      content="Mostage - Create interactive presentations with Markdown and HTML support."
+    />
+    <meta property="og:image" content="https://mostage.app/images/logo.svg" />
+    <meta property="og:site_name" content="Mostage" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://mostage.app/" />
+    <meta property="twitter:title" content="Mostage - Presentation Framework" />
+    <meta
+      property="twitter:description"
+      content="Mostage - Create interactive presentations with Markdown and HTML support."
+    />
+    <meta
+      property="twitter:image"
+      content="https://mostage.app/images/logo.svg"
+    />
+    <meta property="twitter:creator" content="@mirmousaviii" />
+
+    <meta name="theme-color" content="#667eea" />
+
+    <!-- Prevent content hiding for SEO and headless browsers -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mostage.app/" />
+
+    <!-- Structured Data for Google -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Mostage",
+        "url": "https://mostage.app/",
+        "logo": "https://mostage.app/images/logo.svg",
+        "description": "Mostage - Create modern and interactive presentations with Markdown and HTML support.",
+        "sameAs": [
+          "https://github.com/mirmousaviii/mostage",
+          "https://www.npmjs.com/package/mostage"
+        ]
+      }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/icons/favicon-96x96.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/icons/apple-touch-icon.png"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- Detect JavaScript support -->
+    <script>
+      // Remove no-js class if JavaScript is enabled
+      document.documentElement.classList.remove("no-js");
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+  <body>
+    <!-- Section Indicators -->
+    <div class="scroll-indicators" id="scroll-indicators">
+      <div class="scroll-indicator" data-section="Mostage" data-target=".hero">
+        <div class="progress-bar"></div>
+      </div>
+      <div
+        class="scroll-indicator"
+        data-section="Features"
+        data-target="#features"
+      >
+        <div class="progress-bar"></div>
+      </div>
+      <div
+        class="scroll-indicator"
+        data-section="Speaker Mode"
+        data-target="#speaker-mode"
+      >
+        <div class="progress-bar"></div>
+      </div>
+      <div class="scroll-indicator" data-section="Themes" data-target="#themes">
+        <div class="progress-bar"></div>
+      </div>
+      <div class="scroll-indicator" data-section="Tools" data-target="#plugins">
+        <div class="progress-bar"></div>
+      </div>
+      <div class="scroll-indicator" data-section="Sample" data-target="#demo">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="https://mostage.app/" class="logo-link">
+            <img src="./images/logo.svg" alt="Mostage" class="logo-img" />
+            <span class="logo-text">Mostage</span>
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="nav-links">
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#speaker-mode" class="nav-link">Speaker Mode</a>
+          <a href="#themes" class="nav-link">Themes</a>
+          <a href="#plugins" class="nav-link">Tools</a>
+          <a href="#demo" class="nav-link">Sample</a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button
+          class="mobile-menu-toggle"
+          aria-label="Toggle mobile menu"
+          aria-expanded="false"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav" aria-hidden="true">
+        <div class="mobile-nav-content">
+          <a href="#features" class="mobile-nav-link">Features</a>
+          <a href="#speaker-mode" class="mobile-nav-link">Speaker Mode</a>
+          <a href="#themes" class="mobile-nav-link">Themes</a>
+          <a href="#plugins" class="mobile-nav-link">Tools</a>
+          <a href="#demo" class="mobile-nav-link">Sample</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mostage Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <img src="./images/logo.svg" alt="Mostage" class="hero-logo" />
+            Mostage
+          </h1>
+          <h2 class="hero-subtitle">
+            <span class="word-highlight">Mo</span>dern
+            <span class="word-highlight">Stage</span> as a Presentation
+            Framework
+          </h2>
+          <p class="hero-description">
+            Create modern and interactive presentations<br />
+            with <strong>Markdown</strong> and <strong>HTML</strong> support.
+          </p>
+
+          <div class="hero-buttons">
+            <a
+              href="https://github.com/mirmousaviii/mostage-editor"
+              class="btn btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+            <a href="#get-started" class="btn btn-primary">Get Started</a>
+          </div>
+
+          <!-- Scroll Hint -->
+          <div class="scroll-hint">
+            <div class="scroll-hint-arrow">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 5v14"></path>
+                <path d="M19 12l-7 7-7-7"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="code-preview">
+            <div class="code-header">
+              <div class="code-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="code-title">presentation.md</span>
+            </div>
+            <div class="code-content">
+              <pre><code># Welcome to Mostage
+
+## Based on Mostage Library
+
+---
+
+## What is Mostage?
+
+### Modern stage as a Presentation Framework
+
+---
+
+## Key Features
+
+- **Markdown Support** - Write in Markdown
+- **HTML Support** - Use HTML when needed
+- **Web-based** - Runs in any modern browser</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Mostage Features</h2>
+        <p class="section-subtitle animate-on-scroll delay-1">
+          Discover the powerful features that make Mostage the perfect choice
+          for modern presentations
+        </p>
+        <div class="features-grid">
+          <div class="feature-card animate-on-scroll delay-2">
+            <h3>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                ></path>
+                <polyline points="14,2 14,8 20,8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10,9 9,9 8,9"></polyline>
+              </svg>
+              AI-Powered Creation
+            </h3>
+            <p>
+              Generate presentations automatically with AI assistance and smart
+              content suggestions
+            </p>
+          </div>
+          <div class="feature-card animate-on-scroll delay-2">
+            <h3>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="16,18 22,12 16,6"></polyline>
+                <polyline points="8,6 2,12 8,18"></polyline>
+              </svg>
+              Live Polling System
+            </h3>
+            <p>
+              Create interactive polls and surveys for real-time audience
+              engagement and feedback
+            </p>
+          </div>
+          <div class="feature-card animate-on-scroll delay-3">
+            <h3>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                ></path>
+              </svg>
+              Audience Q&A with Voting
+            </h3>
+            <p>
+              Enable audience questions with voting system for better
+              interaction and engagement
+            </p>
+          </div>
+          <div class="feature-card animate-on-scroll delay-3">
+            <h3>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                  d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                ></path>
+              </svg>
+              Live Quiz System
+            </h3>
+            <p>
+              Conduct interactive quizzes and assessments with instant scoring
+              and results
+            </p>
+          </div>
+          <div class="feature-card animate-on-scroll delay-4">
+            <h3>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+              Real-time Reactions
+            </h3>
+            <p>
+              Capture audience emotions and feedback with live reaction tracking
+            </p>
+          </div>
+          <div class="feature-card animate-on-scroll delay-4">
+            <h3>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+              Mobile Remote Control
+            </h3>
+            <p>
+              Control presentations remotely from your mobile device with
+              gesture support
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Speaker Mode Section -->
+    <section id="speaker-mode" class="speaker-mode-section">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Speaker Mode</h2>
+        <p class="section-subtitle animate-on-scroll delay-1">
+          Professional presentation mode with advanced speaker tools and
+          audience interaction
+        </p>
+        <div class="speaker-content">
+          <!-- Speaker Mode Visual Mockup -->
+          <div class="speaker-mockup animate-on-scroll delay-4">
+            <div class="mockup-container">
+              <div class="speaker-interface">
+                <!-- Speaker View Header -->
+                <div class="speaker-header">
+                  <div class="presentation-info">
+                    <h4>My Presentation</h4>
+                    <span class="slide-counter">Slide 3 of 15</span>
+                  </div>
+                  <div class="timer-display">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12,6 12,12 16,14"></polyline>
+                    </svg>
+                    <span id="countdown-timer">25:00</span>
+                  </div>
+                </div>
+
+                <!-- Main Content Area -->
+                <div class="speaker-content-area">
+                  <!-- Current Slide Preview -->
+                  <div class="current-slide">
+                    <div class="slide-preview">
+                      <h3>Slide</h3>
+                    </div>
+                  </div>
+
+                  <!-- Speaker Tools Panel -->
+                  <div class="speaker-tools">
+                    <div class="tool-section">
+                      <h5>Speaker Notes</h5>
+                      <div class="notes-area">
+                        <p>
+                          Remember to explain the interactive features and
+                          demonstrate live polling...
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="tool-section">
+                      <h5>Next Slides</h5>
+                      <div class="next-slides">
+                        <div class="next-slide-preview">
+                          <span>4. Interactive Polls</span>
+                        </div>
+                        <div class="next-slide-preview">
+                          <span>5. Q&A Session</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="tool-section">
+                      <h5>Audience Interaction</h5>
+                      <div class="interaction-stats">
+                        <div class="stat-item">
+                          <span class="stat-number">23</span>
+                          <span class="stat-label">Live Reactions</span>
+                        </div>
+                        <div class="stat-item">
+                          <span class="stat-number">5</span>
+                          <span class="stat-label">Questions</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Control Panel -->
+                <div class="control-panel">
+                  <button class="control-btn">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <polyline points="15,18 9,12 15,6"></polyline>
+                    </svg>
+                  </button>
+                  <button class="control-btn active">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <polygon points="5,3 19,12 5,21"></polygon>
+                    </svg>
+                  </button>
+                  <button class="control-btn">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                  </button>
+                  <button class="control-btn">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path
+                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Themes Section -->
+    <section id="themes" class="themes-section">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Theme System</h2>
+        <p class="section-subtitle animate-on-scroll delay-1">
+          Choose from built-in themes or create your own custom themes
+        </p>
+        <div class="themes-grid">
+          <div class="theme-card animate-on-scroll delay-2">
+            <div class="theme-preview light-theme">
+              <div class="slide-content">
+                <h1>Light Theme</h1>
+                <h2>Classic Presentations</h2>
+                <h3>Clean and professional design</h3>
+              </div>
+            </div>
+          </div>
+          <div class="theme-card animate-on-scroll delay-2">
+            <div class="theme-preview dark-theme">
+              <div class="slide-content">
+                <h1>Dark Theme</h1>
+                <h2>Code Presentations</h2>
+                <h3>Perfect for low-light conditions</h3>
+              </div>
+            </div>
+          </div>
+          <div class="theme-card animate-on-scroll delay-2">
+            <div class="theme-preview dracula-theme">
+              <div class="slide-content">
+                <h1>Dracula Theme</h1>
+                <h2>Vibrant Accents</h2>
+                <h3>Popular dark theme with vibrant colors</h3>
+              </div>
+            </div>
+          </div>
+          <div class="theme-card animate-on-scroll delay-3">
+            <div class="theme-preview ocean-theme">
+              <div class="slide-content">
+                <h1>Ocean Theme</h1>
+                <h2>Calm & Elegant</h2>
+                <h3>Inspired by the sea, refreshing design</h3>
+              </div>
+            </div>
+          </div>
+          <div class="theme-card animate-on-scroll delay-3">
+            <div class="theme-preview rainbow-theme">
+              <div class="slide-content">
+                <h1>Rainbow Theme</h1>
+                <h2>Colorful & Bright</h2>
+                <h3>Vibrant colors for creative presentations</h3>
+              </div>
+            </div>
+          </div>
+          <div class="theme-card animate-on-scroll delay-3">
+            <div class="theme-preview custom-theme">
+              <div class="slide-content">
+                <h1>Custom Theme</h1>
+                <h2>Your Style</h2>
+                <h3>Create themes that match your brand</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="theme-note animate-on-scroll delay-4">
+          <p>
+            <strong>Theme System:</strong> You can create your own custom
+            themes!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plugins Section -->
+    <section id="plugins" class="plugins-section">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Presentation Tools</h2>
+        <p class="section-subtitle animate-on-scroll delay-1">
+          Powerful tools and integrations to enhance your presentation workflow
+          and collaboration
+        </p>
+        <div class="plugins-grid">
+          <div class="plugin-card animate-on-scroll delay-2">
+            <h3>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                ></path>
+                <polyline points="14,2 14,8 20,8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10,9 9,9 8,9"></polyline>
+              </svg>
+              Export
+            </h3>
+            <p>
+              Export presentations to PDF, PPTX, PNG, JPG and single HTML file
+            </p>
+          </div>
+          <div class="plugin-card animate-on-scroll delay-2">
+            <h3>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+              </svg>
+              Cloud Storage
+            </h3>
+            <p>
+              Secure cloud storage with automatic sync and collaborative editing
+            </p>
+          </div>
+          <div class="plugin-card animate-on-scroll delay-3">
+            <h3>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="18" cy="5" r="3"></circle>
+                <circle cx="6" cy="12" r="3"></circle>
+                <circle cx="18" cy="19" r="3"></circle>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+              </svg>
+              Share
+            </h3>
+            <p>Share presentations via links with advanced privacy controls</p>
+          </div>
+          <div class="plugin-card animate-on-scroll delay-3">
+            <h3>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M9 12l2 2 4-4"></path>
+                <path
+                  d="M21 12c.552 0 1-.448 1-1V5c0-.552-.448-1-1-1H3c-.552 0-1 .448-1 1v6c0 .552.448 1 1 1h18z"
+                ></path>
+                <path
+                  d="M3 12v6c0 .552.448 1 1 1h16c.552 0 1-.448 1-1v-6"
+                ></path>
+              </svg>
+              Accessibility Tools
+            </h3>
+            <p>
+              Built-in accessibility features including screen reader support
+              and keyboard navigation
+            </p>
+          </div>
+        </div>
+        <div class="plugin-note animate-on-scroll delay-4">
+          <p>
+            <strong>Plugins System:</strong> Explore more plugins for extra
+            features.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo-section">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Presentation Sample</h2>
+        <p class="section-subtitle animate-on-scroll delay-1">
+          Explore a sample presentation showcasing Mostage's capabilities and
+          interactive features
+        </p>
+        <div class="demo-showcase animate-on-scroll delay-2">
+          <a
+            href="https://mostage.app/demo/"
+            target="_blank"
+            class="demo-image-container"
+          >
+            <img
+              src="images/demo.png"
+              alt="Mostage Demo Screenshot"
+              class="demo-image"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <div>
+              <a href="https://mostage.app/" class="footer-logo-link"
+                >Mostage</a
+              >
+              <p>Modern stage as a Presentation Framework</p>
+            </div>
+          </div>
+          <div class="footer-links">
+            <a
+              href="https://mostage.js.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Mostage Library</a
+            >
+            <a
+              href="https://github.com/mirmousaviii/mostage-editor"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Mostage</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
