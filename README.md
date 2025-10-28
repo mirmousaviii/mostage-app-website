@@ -6,15 +6,7 @@ A responsive website for the Mostage presentation framework. Built with vanilla 
 
 Mostage is a presentation framework based on Markdown and HTML.
 
-Available as a NPM Package, CLI and Editor
-
-## Website Features
-
-- **Responsive Design** - Optimized for desktop, tablet, and mobile
-- **Smooth Animations** - Scroll-triggered animations and transitions
-- **Interactive Navigation** - Scroll indicators and smooth scrolling
-- **Modern UI** - Clean, professional design with dark theme
-- **Performance Optimized** - Throttled scroll events and efficient animations
+Available as a NPM Package, CLI and Web App.
 
 ## Getting Started
 
